@@ -68,9 +68,9 @@ Current time is Wed Nov 30 10:28:49 ICT 2022
 Current time is Wed Nov 30 10:28:53 ICT 2022
 Current time is Wed Nov 30 10:28:56 ICT 2022
 ```
-Ví dụ ở trên, method cần mất 1s để hoàn thành.
-Ngược lại với FixedRate, FixedDelay sẽ đợi method hoàn thành rồi mới quan tâm đến việc sẽ gọi lại method trong bao lâu.
-Vì vậy, ta thấy được cứ mỗi 3s, method sẽ được gọi đến một lần
+Ví dụ ở trên, method cần mất 1s để hoàn thành. <br/>
+Ngược lại với FixedRate, FixedDelay sẽ đợi method hoàn thành rồi mới quan tâm đến việc sẽ gọi lại method trong bao lâu. <br/>
+Vì vậy, ta thấy được cứ mỗi 3s, method sẽ được gọi đến một lần. <br/>
 
 ##### InitialDelay
 Thời gian delay cho lần chạy đầu tiên một method
