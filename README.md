@@ -142,7 +142,7 @@ Tham số cần truyền vào thuộc tính cron là một định dạng chuỗ
 `-` : phạm vi, ví dụ `( 1-10 )` trong "hour" có nghĩa là phạm vi từ `"1 giờ đến 10 giờ"` <br/>
 `/` : gia tăng, ví dụ `( 5/15 )` trong "min" có nghĩa là `"5, 20, 35, 50 phút trong một giờ"` <br/>
 `L` : cuối cùng, ví dụng `( L )` trong "day of the month" có nghĩa là `"ngày cuối cùng của tháng đó"` <br/>
-`W` : ngày thường, ví dụ `( 10W )` trong "day of the month", nó sẽ chọn `ngày thường gần ngày 10 hàng tháng, <br/>
+`W` : ngày thường, ví dụ `( 10W )` trong "day of the month", nó sẽ chọn `ngày thường gần ngày 10 hàng tháng,
       nếu ngày 10 là thứ 7, nó sẽ chọn ngày mùng 9. Nếu ngày 10 là chủ nhật, nó sẽ chọn ngày 11` <br/>
 `#` : chỉ định lần xuất hiện thứ N, ví dụ `"thứ 6 lần 3 của một tháng"` có nghĩa là `( 6#3 )` <br/>
 
