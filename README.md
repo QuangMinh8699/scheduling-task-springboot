@@ -45,7 +45,7 @@ Current time is Wed Nov 30 10:21:14 ICT 2022
 ```
 Như vậy, ta có thể thấy cứ mỗi 2s, method sẽ được gọi đến một lần. <br/>
 FixedRate sẽ không quan tâm đến method chạy hết bao lâu và đã hoàn thành chưa, nó chỉ quan tâm đến nó sẽ gọi lại method đấy trong bao lâu.
-
+<hr>
 ### FixedDelay
 Khoảng cách thời gian giữa các lần chạy khi một method đã hoàn thành
 ```java
