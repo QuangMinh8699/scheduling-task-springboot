@@ -71,7 +71,7 @@ Current time is Wed Nov 30 10:28:56 ICT 2022
 Ví dụ ở trên, method cần mất 1s để hoàn thành. <br/>
 Ngược lại với FixedRate, FixedDelay sẽ đợi method hoàn thành rồi mới quan tâm đến việc sẽ gọi lại method trong bao lâu. <br/>
 Vì vậy, ta thấy được cứ mỗi 3s, method sẽ được gọi đến một lần. <br/>
-
+<hr>
 ### InitialDelay
 Thời gian delay cho lần chạy đầu tiên một method
 ```java
@@ -103,7 +103,7 @@ Và chúng ta để ý:
 2022-11-30T10:39:23.185+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
 ```
 Trong lần gọi đầu tiền, InitialDelay đã delay 5s trước khi gọi method.
-
+<hr>
 ### Cron
 Lên lịch trình cụ thể cho một method
 ```java
@@ -127,7 +127,7 @@ Current time is Wed Nov 30 10:51:58 ICT 2022
 ```
 Giả sử chúng ta muốn đặt lịch cụ thể trong một tuẩn, hãy sử dụng cron.<br/>
 Tham số cần truyền vào thuộc tính cron là một định dạng chuỗi unix-cron ` (* * * * *)` theo thứ tự là `("min" "hour" "day of the month" "month" "day of the week")` <br/>
-
+<hr>
 #### Các kí tự đặc biệt trong cron:
 
 `*` : tất cả, ví dụ `( * )` trong "min" có nghĩa là `tất cả mọi phút` <br/>
