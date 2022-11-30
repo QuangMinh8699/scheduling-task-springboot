@@ -4,7 +4,7 @@
 Đầu tiên, chúng ta phải thêm annotation `@EnableScheduling` vào file `Application` để đảm bảo rằng trình thực thi tác vụ đã được tạo.
 Nếu không, không coponent nào có thể xử dụng scheduled
 
-#### ScheduleDemoApplication 
+### ScheduleDemoApplication 
 ```java
 @SpringBootApplication
 @EnableScheduling
@@ -21,8 +21,8 @@ Hai `rules` cho một method `@Scheduled`
 - Là một hàm không cho phép bất kì một parameters nào
 ```
 
-#### Chúng ta cần quan tâm đến 4 thuộc tính chính trong @Scheduled
-#### FixedRate
+### Bốn thuộc tính chính trong @Scheduled
+### FixedRate
 Khoảng cách thời gian giữa các lần chạy method
 ```java
 @Component
@@ -46,7 +46,7 @@ Current time is Wed Nov 30 10:21:14 ICT 2022
 Như vậy, ta có thể thấy cứ mỗi 2s, method sẽ được gọi đến một lần. <br/>
 FixedRate sẽ không quan tâm đến method chạy hết bao lâu và đã hoàn thành chưa, nó chỉ quan tâm đến nó sẽ gọi lại method đấy trong bao lâu.
 
-#### FixedDelay
+### FixedDelay
 Khoảng cách thời gian giữa các lần chạy khi một method đã hoàn thành
 ```java
 @Component
@@ -72,7 +72,7 @@ Ví dụ ở trên, method cần mất 1s để hoàn thành. <br/>
 Ngược lại với FixedRate, FixedDelay sẽ đợi method hoàn thành rồi mới quan tâm đến việc sẽ gọi lại method trong bao lâu. <br/>
 Vì vậy, ta thấy được cứ mỗi 3s, method sẽ được gọi đến một lần. <br/>
 
-#### InitialDelay
+### InitialDelay
 Thời gian delay cho lần chạy đầu tiên một method
 ```java
 @Component
@@ -103,5 +103,6 @@ Và chúng ta để ý:
 2022-11-30T10:39:23.185+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
 ```
 Trong lần gọi đầu tiền, InitialDelay đã delay 5s trước khi gọi method.
-##### Cron
+
+#### Cron
 Lên lịch trình cụ thể cho một method
