@@ -21,8 +21,58 @@ Hai `rules` cho một method `@Scheduled`
 - Là một hàm không cho phép bất kì một parameters nào
 ```
 
-#### Chúng ta cần quan tâm đến 4 method chính trong @Scheduled
-##### FixedRate
-##### FixedDelay
+#### Chúng ta cần quan tâm đến 4 thuộc tính chính trong @Scheduled
+#### FixedRate
+Khoảng cách thời gian giữa các lần chạy method
+```java
+@Component
+public class ScheduleComponent {
+
+    Logger logger = LoggerFactory.getLogger(ScheduleComponent.class);
+    
+    @Scheduled(fixedRate = 2000)
+    public void getCurrentTimeWithFixedRate() {
+        logger.info("Current time is " + new Date());
+    }
+}
+```
+Output: 
+```java
+Current time is Wed Nov 30 10:21:08 ICT 2022
+Current time is Wed Nov 30 10:21:10 ICT 2022
+Current time is Wed Nov 30 10:21:12 ICT 2022
+Current time is Wed Nov 30 10:21:14 ICT 2022
+```
+Như vậy, ta có thể thấy cứ mỗi 2s, method sẽ được gọi đến một lần.
+FixedRate sẽ không quan tâm đến method chạy hết bao lâu và đã hoàn thành chưa, nó chỉ quan tâm đến nó sẽ gọi lại method đấy trong bao lâu.
+
+#### FixedDelay
+Khoảng cách thời gian giữa các lần chạy khi một method đã hoàn thành
+```java
+@Component
+public class ScheduleComponent {
+
+    Logger logger = LoggerFactory.getLogger(ScheduleComponent.class);
+
+    @Scheduled(fixedDelay = 2000)
+    public void getCurrentTimeWithFixedDelay() throws InterruptedException {
+        logger.info("Current time is " + new Date());
+        Thread.sleep(1000);
+    }
+}
+```
+Output:
+```java
+Current time is Wed Nov 30 10:28:46 ICT 2022
+Current time is Wed Nov 30 10:28:49 ICT 2022
+Current time is Wed Nov 30 10:28:53 ICT 2022
+Current time is Wed Nov 30 10:28:56 ICT 2022
+```
+Ví dụ ở trên, method cần mất 1s để hoàn thành.
+Ngược lại với FixedRate, FixedDelay sẽ đợi method hoàn thành rồi mới quan tâm đến việc sẽ gọi lại method trong bao lâu.
+Vì vậy, ta thấy được cứ mỗi 3s, method sẽ được gọi đến một lần
+
 ##### InitialDelay
+Thời gian delay cho lần chạy đầu tiên một method
 ##### Cron
+Lên lịch trình cụ thể cho một method
