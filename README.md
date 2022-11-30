@@ -20,6 +20,7 @@ Hai `rules` cho một method `@Scheduled`
 - Là một hàm void, không trả về bất cứ giá trị nào
 - Là một hàm không cho phép bất kì một parameters nào
 ```
+<hr>
 
 ### Bốn thuộc tính chính trong @Scheduled
 ### FixedRate
@@ -132,7 +133,7 @@ Giả sử chúng ta muốn đặt lịch cụ thể trong một tuẩn, hãy s�
 Tham số cần truyền vào thuộc tính cron là một định dạng chuỗi unix-cron ` (* * * * *)` theo thứ tự là `("min" "hour" "day of the month" "month" "day of the week")` <br/>
 <hr>
 
-#### Các kí tự đặc biệt trong cron:
+## Các kí tự đặc biệt trong cron:
 
 `*` : tất cả, ví dụ `( * )` trong "min" có nghĩa là `tất cả mọi phút` <br/>
 `?` : bất cứ lúc nào, ví dụ ta muốn đặt lịch vào ngày ngày `"14 hàng tháng"`, mặc dù là bất kể ngày nào trong tuần. <br/>
