@@ -74,5 +74,34 @@ Vì vậy, ta thấy được cứ mỗi 3s, method sẽ được gọi đến m
 
 ##### InitialDelay
 Thời gian delay cho lần chạy đầu tiên một method
+```java
+@Component
+public class ScheduleComponent {
+
+    Logger logger = LoggerFactory.getLogger(ScheduleComponent.class);
+
+    @Scheduled(fixedRate = 2000, initialDelay = 5000)
+    public void getCurrentTimeWithFixedRateAndInitialDelay(){
+        logger.info("Current time is " + new Date());
+    }
+}
+```
+Output:
+```java
+2022-11-30T10:39:18.177+07:00  INFO 6300 --- [           main] c.tqm.schedule.S...
+2022-11-30T10:39:23.185+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
+2022-11-30T10:39:25.186+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
+2022-11-30T10:39:27.184+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
+2022-11-30T10:39:29.180+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
+2022-11-30T10:39:31.175+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
+```
+InitialDelay sẽ delay thời gian gọi method trong lần đầu tiên. <br/>
+Ví dụ ở trên, chúng ta sẽ cho InitialDelay 5s. <br/>
+Và chúng ta để ý:
+```java
+2022-11-30T10:39:18.177+07:00  INFO 6300 --- [           main] c.tqm.schedule.S...
+2022-11-30T10:39:23.185+07:00  INFO 6300 --- [   scheduling-1] c.t.s.component.S...
+```
+Trong lần gọi đầu tiền, InitialDelay đã delay 5s trước khi gọi method.
 ##### Cron
 Lên lịch trình cụ thể cho một method
