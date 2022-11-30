@@ -128,16 +128,16 @@ Current time is Wed Nov 30 10:51:58 ICT 2022
 Giả sử chúng ta muốn đặt lịch cụ thể trong một tuẩn, hãy sử dụng cron.<br/>
 Tham số cần truyền vào thuộc tính cron là một định dạng chuỗi unix-cron ` (* * * * *)` theo thứ tự là `("min" "hour" "day of the month" "month" "day of the week")` <br/>
 
-##### Các kí tự đặc biệt trong cron:
+#### Các kí tự đặc biệt trong cron:
 
-`*` : tất cả, ví dụ (*) trong "min" có nghĩa là tất cả mọi phút <br/>
-`?` : bất cứ lúc nào, ví dụ ta muốn đặt lịch vào ngày ngày "14 hàng tháng", mặc dù là bất kể ngày nào trong tuần. <br/>
-      Ta sẽ để (?) trong "day of the week"<br/>
-`,` : giá trị, ví dụ (MON, WED, FRI) trong "day of week" có nghĩa là "thứ 2, 4, 6 trong một tuần"<br/>
-`-` : phạm vi, ví dụ (1-10) trong "hour" có nghĩa là phạm vi từ "1 giờ đến 10 giờ"<br/>
-`/` : gia tăng, ví dụ (5/15) trong "min" có nghĩa là "5, 20, 35, 50 phút trong một giờ"<br/>
-`L` : cuối cùng, ví dụng (L) trong "day of the month" có nghĩa là "ngày cuối cùng của tháng đó"<br/>
-`W` : ngày thường, ví dụ (10W) trong "day of the month", nó sẽ chọn ngày thường gần ngày 10 hàng tháng, <br/>
-      nếu ngày 10 là thứ 7, nó sẽ chọn ngày mùng 9. Nếu ngày 10 là chủ nhật, nó sẽ chọn ngày 11<br/>
-`#` : chỉ định lần xuất hiện thứ N, ví dụ "thứ 6 lần 3 của một tháng" có nghĩa là (6#3)<br/>
+`*` : tất cả, ví dụ `( * )` trong "min" có nghĩa là `tất cả mọi phút` <br/>
+`?` : bất cứ lúc nào, ví dụ ta muốn đặt lịch vào ngày ngày `"14 hàng tháng"`, mặc dù là bất kể ngày nào trong tuần. <br/>
+      Ta sẽ để `( ? )` trong "day of the week"<br/>
+`,` : giá trị, ví dụ `(MON, WED, FRI)` trong "day of week" có nghĩa là `"thứ 2, 4, 6 trong một tuần"`<br/>
+`-` : phạm vi, ví dụ `( 1-10 )` trong "hour" có nghĩa là phạm vi từ `"1 giờ đến 10 giờ"` <br/>
+`/` : gia tăng, ví dụ `( 5/15 )` trong "min" có nghĩa là `"5, 20, 35, 50 phút trong một giờ"` <br/>
+`L` : cuối cùng, ví dụng `( L )` trong "day of the month" có nghĩa là `"ngày cuối cùng của tháng đó"` <br/>
+`W` : ngày thường, ví dụ `( 10W )` trong "day of the month", nó sẽ chọn `ngày thường gần ngày 10 hàng tháng, <br/>
+      nếu ngày 10 là thứ 7, nó sẽ chọn ngày mùng 9. Nếu ngày 10 là chủ nhật, nó sẽ chọn ngày 11` <br/>
+`#` : chỉ định lần xuất hiện thứ N, ví dụ `"thứ 6 lần 3 của một tháng"` có nghĩa là `( 6#3 )` <br/>
 
