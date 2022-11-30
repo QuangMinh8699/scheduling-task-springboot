@@ -2,7 +2,7 @@
 ### Chúng ta sẽ xử dụng annotation @Scheduled
 
 Đầu tiên, chúng ta phải thêm annotation `@EnableScheduling` vào file `Application` để đảm bảo rằng trình thực thi tác vụ đã được tạo.
-Nếu không, không coponent nào có thể xử dụng scheduled
+Nếu không, không component nào có thể xử dụng scheduled
 
 ### ScheduleDemoApplication 
 ```java
